@@ -5,6 +5,11 @@
     modules to get copies of the state.
 
 */
+
+const orderDatabase = {
+    orderBuilder: {},
+}
+
 const database = {
     styles: [
         { id: 1, style: "Classic", price: 500 },
@@ -36,6 +41,8 @@ const database = {
     ]
 }
 
+
+// get state functions
 export const getStyles = () => {
     return database.styles.map(style => ({...style}))
 }
@@ -52,3 +59,16 @@ export const getOrders = () => {
     return database.customOrders.map(order => ({...order}))
 }
 
+// set state functions
+
+export const setMetal = (id) => {
+    orderDatabase.orderBuilder.metalId = id
+}
+
+export const setSize = (id) => {
+    orderDatabase.orderBuilder.sizeId = id
+}
+
+export const setStyle = (id) => {
+    orderDatabase.orderBuilder.styleId = id
+}
