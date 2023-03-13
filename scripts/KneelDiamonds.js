@@ -12,7 +12,7 @@ document.addEventListener(
 
     if (itemClicked.id.startsWith("orderButton")) {
 
-            addCustomOrder();
+            addCustomOrder()
     }
  }
 )
@@ -42,6 +42,7 @@ export const KneelDiamonds = () => {
 
         <article class="customOrders">
             <h2>Custom Jewelry Orders</h2>
+            ${Orders()}
         </article>
     `
 }

@@ -6,10 +6,6 @@
 
 */
 
-const orderDatabase = {
-    orderBuilder: {},
-}
-
 const database = {
     styles: [
         { id: 1, style: "Classic", price: 500 },
@@ -38,6 +34,10 @@ const database = {
             styleId: 3,
             timestamp: 1614659931693
         }
+    ],
+    orderBuilder: [{
+
+    }
     ]
 }
 
@@ -62,15 +62,15 @@ export const getOrders = () => {
 // set state functions
 
 export const setMetal = (id) => {
-    orderDatabase.orderBuilder.metalId = id
+    database.orderBuilder.metalId = id
 }
 
 export const setSize = (id) => {
-    orderDatabase.orderBuilder.sizeId = id
+    database.orderBuilder.sizeId = id
 }
 
 export const setStyle = (id) => {
-    orderDatabase.orderBuilder.styleId = id
+    database.orderBuilder.styleId = id
 }
 
 //export/function for creating permanent orders once create order is pressed
